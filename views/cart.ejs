@@ -1,0 +1,53 @@
+<%- include('../partials/header') %>
+<body>
+  <% var price = 0.0 %> 
+    <div id="cart"> 
+        <h2>Shopping Cart</h2>
+        <ul class="items-list">
+            <% items.forEach((item)=> {%>
+                <% 
+                var money =  item.price;
+                price += Number(money.substring(1));
+               %>
+            <li>
+                <img src="<%= item.image%>" alt="" width=150px height =150px>
+                <div class="info">
+                    <h3>Price: <%= item.price %></h3> 
+                    <form action="/delete/<%= item._id%>" method="POST">
+                        <button>Remove from Cart</button>
+                    </form>
+                </div>
+            </li>
+            <% }); %>
+        </ul>
+        <div id="total">
+            <h2>Total : $<%= price %> </h2>
+        </div>
+        <% if(items.length != 0) {%>    
+        <div class="cart-buttons">
+            <form action="/delete_all" method="POST">
+                <button  id="button1">Remove all</button>
+            </form>
+            <form action="/charge/<%= price %>" method="POST">
+                <script
+                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key = "<%= stripePublicKey %>"
+                data-amount = '<%= price * 100%>'
+                data-locale = "auto" 
+                data-name = "Marvericks"
+                data-image = "/img/logo.png"
+                >
+                </script>
+                <script>
+                 // hide default stripe button
+                  document.getElementsByClassName('stripe-button-el')[0].style.display  = "none";
+                </script>
+                <button id="button2" type="submit">Purchase</button>
+            </form>
+        </div>
+        <% } else {%>
+            <h3>The cart is empty nothing to show</h3>
+            <% } %>
+    </div>
+ 
+<%- include('../partials/footer') %>

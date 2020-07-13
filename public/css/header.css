@@ -1,0 +1,283 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* -------------------*/
+.container{
+    max-width: 960px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+nav{
+	max-width:960px;
+	width: 100%;
+    background-color: #cbc6c6;
+	height: 30px;
+}
+.nav{
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	font-size: 1.2rem;
+	letter-spacing: 0.3rem;
+}
+.option{
+	height: 30px;
+}
+.option:hover{
+	background-color: white;
+}
+
+.footer{
+	background-color: #faf6f6;
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 5rem;
+	font-size: small;
+}
+.footer > .content{
+	width: 30%;
+}
+.hero{
+	padding-top: 1rem;
+	padding-bottom: 25px;
+	width: inherit;
+	height: 1000px;
+}
+.frame{
+	width:  960px;
+	height: 528px;
+	background-color: #473f3f;
+	position: absolute;
+	top: 10%;
+	z-index: -1;
+}
+#header{
+	height: 1000px;
+	width: 500px;
+	margin-right: 8%;
+}
+.hero::after {
+	content: "";
+	display: block;
+	clear: both; /* directly related to floats */
+	}
+.grid{
+	display: block;
+}
+.grid > .row{
+	padding: 25px 0px;
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+}
+
+.info{
+	padding: 2rem 0;
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	align-items: center;
+}
+
+.info > p {
+	width: 30%;
+	padding: 1rem;
+	border: 1px solid #c7c4c4;
+	color: #6b6a6a;
+}
+.info >p >span{
+	color: #6e6262;
+	font-size: 2rem;
+}
+a > .cart{
+	width: 20%;
+	border-top-right-radius: 20px;
+	background-color: #c7c4c4;
+	text-align: center;
+	position: relative;
+	right: 0;
+	margin-right: 3rem;
+	margin-bottom: 3rem;
+}
+.cart > h2{
+	padding: 2rem;
+}
+.cart:hover{
+	background-color: #a5a4a4;
+}
+.links{
+	width: 100%;
+	height: 10rem;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+#logo{
+	position: absolute;
+	top: 0;
+	width: 50px;
+	height: 50px;
+
+}
+h3{
+	margin-bottom: 2rem;
+}
+h3 > a{
+	color: #a8a5a5;
+	text-decoration: underline;
+
+}
+.thumbnail{
+	width: 300px;
+	height: 300px;
+	position: relative;
+}
+div > .price{
+	position:absolute;
+	z-index: 2;
+	font-size: 4rem;
+	bottom: 0;
+	left: 20%;
+	color: white;
+}
+a{
+	position: relative;
+}
+a > .price{
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	z-index: 2;
+	font-size: 4rem;
+	right: 0;
+	left: 20%;
+	top: -90px;
+	color: white;
+}
+.item{
+	opacity: 75%;
+}
+
+
+/* the cart page */
+#cart{
+	margin-top: 5%;
+}
+
+#cart > h2{
+	font-size: xx-large;
+	font-weight: 500;
+	text-decoration: underline;
+	margin-bottom: 1.5rem;
+	font-style: italic;
+	letter-spacing: 0.3rem;
+}
+
+.items-list > li {
+	border: 1px solid #cccccc;
+	padding: 0.7rem;
+	display: flex;
+	margin-bottom: 2rem;
+}
+.items-list > li > img{
+	margin-right: 1rem;
+}
+.items-list > li > .info > h3{
+	font-size: 2rem;
+	color:#6b6a6a ;
+}
+.items-list > li > .info {
+	display: flex;
+	width: 80%;
+	justify-content: space-between;
+}
+.items-list > li > .info > form > button{
+	padding: 1rem;
+	background-color: #6e6262;
+	color: white;
+	cursor: pointer;
+}
+.cart-buttons{
+	width: 50%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 3rem;
+}
+.cart-buttons > form > button{
+	padding: 1rem 5rem;
+	border: none;
+	font-size: 1rem;
+	font-weight: 500;
+	cursor: pointer;
+}
+#button1{
+	background-color: #d3d3d3;
+}
+#button2{
+	background-color: #473f3f;
+	color: white;
+}
+.cart-buttons > form > button:hover{
+	border: 1px solid #6e6262;
+}
+#total{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+#total > h2{
+	font-size: 27px;
+	padding-right: 2rem;
+	padding-bottom: 1rem;
+	font-weight: 600;
+	color: #6e6262;
+}

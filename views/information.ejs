@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+<div class="info">
+    <img src="/<%= data.image %>"  width="600px" height="500px">
+    <p><span>Price: <%= data.price %></span><br><%= data.description %></p>
+</div>
+
+<a href="/create/<%= data.image %>/<%= data.price%>">
+    <div class="cart">
+        <h2>ADD TO CART</h2>
+    </div>
+</a>
+<div class="links">
+    <h3><a href= "/cart">VIEW THE CART PAGE</a></h3>
+    <h3><a href= "/">RETURN TO THE HOME PAGE</a></h3>
+</div>
+<!-- <script src="../../js/itemsList.js"></script> -->
+<%- include('../partials/footer') %>
